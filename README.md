@@ -1,5 +1,107 @@
 # 🤖 AI Git Helper
 
+Automate your Git workflow with AI. This script handles the "dirty work": adding files, detecting task IDs from your branch, generating smart commit messages, and keeping your `CHANGELOG.md` updated and linked to Jira.
+
+---
+
+## 🚀 Key Features
+
+* **Auto-Add:** Runs `git add .` automatically before analyzing changes.
+* **Branch Intelligence:** Automatically detects task IDs (e.g., `ID-123`) from the branch name.
+* **AI-Powered Commits:** Generates technical descriptions via Gemini (following Conventional Commits standards).
+* **Dynamic Changelog:** Updates the top of your `CHANGELOG.md` with clickable Jira links.
+* **Atomic Commits:** Code changes and Changelog updates are bundled into a single commit.
+* **Turbo Mode (`-y`):** Prompt-free execution for maximum speed.
+
+---
+
+## 🛠️ Environment Setup
+
+The script uses the following environment variables. Add them to your `~/.zshrc`, `~/.bashrc`, or PowerShell Profile:
+
+| Variable | Description | Default / Example |
+| --- | --- | --- |
+| `GOOGLE_API_KEY` | **(Required)** Google AI Studio API Key | `AIzaSy...` |
+| `GEMINI_MODEL_ID` | Gemini model to be used | `gemini-2.5-flash` |
+| `JIRA_BASE_URL` | Your Jira/Atlassian base URL | `https://company.atlassian.net/browse/` |
+
+---
+
+## 📦 Quick Installation (Linux/macOS)
+
+1. **Prepare the environment:**
+
+```bash
+mkdir -p ~/scripts && cd ~/scripts
+python3 -m venv venv
+source venv/bin/activate
+pip install google-genai
+
+```
+
+2. **Create a shell alias:**
+
+```bash
+# Example for .zshrc or .bashrc
+alias gcommit="~/scripts/venv/bin/python ~/scripts/ai_commit.py"
+
+```
+
+---
+
+## ⌨️ How to Use
+
+### Interactive Mode (Default)
+
+The script will ask for confirmation regarding the Task ID, Jira linking, and the generated message.
+
+```bash
+gcommit
+
+```
+
+### Turbo Mode (Automatic)
+
+Assumes "Yes" for all prompts and extracts all possible info from the branch.
+
+```bash
+gcommit -y
+
+```
+
+### Built-in Help
+
+```bash
+gcommit --help
+
+```
+
+---
+
+## 📂 Changelog Output Example
+
+The script formats the `CHANGELOG.md` as follows:
+
+* [ID-1678](https://www.google.com/search?q=https://%5Byourorganization%5D.atlassian.net/browse/ID-1678) - Refactor login logic and add session validation
+* **ID-01** - Update README with technical documentation
+* [ID-1550](https://www.google.com/search?q=https://%5Byourorganization%5D.atlassian.net/browse/ID-1550) - Fix bug in payment gateway integration
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. Feel free to use and modify it.
+
+```
+
+O seu texto introdutório que revisamos também ficaria ótimo logo abaixo do título principal. Posso te ajudar a integrar mais alguma coisa no script, como um seletor de emojis para os tipos de commit?
+
+```
+
+---
+
+# 🤖 AI Git Helper - PT
+
 Automatize seu fluxo de trabalho Git com IA. Este script faz o "trabalho sujo": adiciona arquivos, detecta IDs de tarefas da branch, gera mensagens de commit inteligentes e mantém seu `CHANGELOG.md` atualizado e linkado ao Jira.
 
 ---
