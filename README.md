@@ -92,12 +92,6 @@ The script formats the `CHANGELOG.md` as follows:
 
 Distributed under the MIT License. Feel free to use and modify it.
 
-```
-
-O seu texto introdutório que revisamos também ficaria ótimo logo abaixo do título principal. Posso te ajudar a integrar mais alguma coisa no script, como um seletor de emojis para os tipos de commit?
-
-```
-
 ---
 
 # 🤖 AI Git Helper - PT

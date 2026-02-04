@@ -1,3 +1,4 @@
+- **ID-05** - Remova bloco de texto do README.
 - **ID-04** - Documente o script AI Git Helper.
 - **ID-02** - Este diff reorganiza e atualiza uma entrada NO-ID no CHANGELOG.md. A descrição sobre a inserção de itens é realocada, e a referência
 - **ID-03** - Refatora IA commit, remove ajuda e extrai IDs.
