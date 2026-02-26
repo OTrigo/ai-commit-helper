@@ -1,3 +1,4 @@
+- **ID-07** - Enhance CLI, multi-lang commits, gitignore
 - **ID-06** - Atualiza changelog e remove comentários.
 - **ID-05** - Remova bloco de texto do README.
 - **ID-04** - Documente o script AI Git Helper.
